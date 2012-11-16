@@ -1,7 +1,7 @@
 package team.gangnamstyle.whenisbetter.ui;
 
-import team.gangnamstyle.whenisbetter.WhenIsBetter;
 import team.gangnamstyle.whenisbetter.R;
+import team.gangnamstyle.whenisbetter.WhenIsBetter;
 import team.gangnamstyle.whenisbetter.model.Member;
 import android.app.ActionBar;
 import android.app.Activity;
@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
 
 	protected WhenIsBetter login;
 	Member user;
-	String phoneId;
+	long phoneId;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -43,16 +43,16 @@ public class MainActivity extends Activity {
 		viewTab.setTabListener(new MyTabListener(viewFragment));
 		createTab.setTabListener(new MyTabListener(createFragment));
 
-		// add the two tabs to actionbar
+		// add the two tabs to action bar
 		actionbar.addTab(joinTab);
 		actionbar.addTab(viewTab);
 		actionbar.addTab(createTab);
 
 		/* end of tab set up */
 
-		phoneId = login.getPhoneId();
-		Toast.makeText(this,
-				"You are logged in with your phone #: " + phoneId + ".",
+		phoneId = user.getMemberId();
+
+		Toast.makeText(this, "Logged in as phone # " + phoneId,
 				Toast.LENGTH_LONG).show();
 
 	}

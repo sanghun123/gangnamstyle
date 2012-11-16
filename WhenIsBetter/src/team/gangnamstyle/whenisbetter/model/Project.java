@@ -6,7 +6,7 @@ import java.util.List;
 public class Project {
 
 	private int projectId;
-	private int managerId;
+	private long managerId;
 	private List<Member> members;
 	private String projectName;
 	private Date startDate;

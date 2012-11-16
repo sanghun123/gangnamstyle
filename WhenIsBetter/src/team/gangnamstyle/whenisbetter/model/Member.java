@@ -2,20 +2,20 @@ package team.gangnamstyle.whenisbetter.model;
 
 public class Member {
 
-	private String memberId;
+	private long memberId;
 	private String memberName;
 
 	public Member() {
 
-		this.memberId = "";
+		this.memberId = -1;
 		this.memberName = "";
 	}
 
-	public String getMemberId() {
+	public long getMemberId() {
 		return memberId;
 	}
 
-	public void setMemberId(String memberId) {
+	public void setMemberId(long memberId) {
 		this.memberId = memberId;
 	}
 
