@@ -11,7 +11,7 @@ import android.content.Context;
 public class WhenIsBetter extends Application {
 
 	public static Context baseContext;
-
+    //hello
 	private Member user;
 	private long phoneId;
 
