@@ -1,19 +1,32 @@
 package team.gangnamstyle.whenisbetter.ui;
 
+import team.gangnamstyle.whenisbetter.WhenIsBetter;
 import team.gangnamstyle.whenisbetter.R;
+import team.gangnamstyle.whenisbetter.model.Member;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
+
+	Activity activity;
+
+	protected WhenIsBetter login;
+	Member user;
+	String phoneId;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// set up actionbar
+		activity = this;
+		login = (WhenIsBetter) activity.getApplication();
+		user = login.getUser();
+
+		// set up action bar
 		ActionBar actionbar = getActionBar();
 		actionbar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		ActionBar.Tab joinTab = actionbar.newTab().setText("Join");
@@ -34,6 +47,13 @@ public class MainActivity extends Activity {
 		actionbar.addTab(joinTab);
 		actionbar.addTab(viewTab);
 		actionbar.addTab(createTab);
-	}
 
+		/* end of tab set up */
+
+		phoneId = login.getPhoneId();
+		Toast.makeText(this,
+				"You are logged in with your phone #: " + phoneId + ".",
+				Toast.LENGTH_LONG).show();
+
+	}
 }
