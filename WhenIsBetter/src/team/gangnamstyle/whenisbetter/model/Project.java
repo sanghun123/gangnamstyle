@@ -19,7 +19,7 @@ public class Project {
 		this.managerId = -1;
 		this.members = null;
 		this.projectName = "";
-		this.startDate = null;
+		this.startDate = new Date();
 		this.timeRange = "";
 		this.confirmed = false;
 
