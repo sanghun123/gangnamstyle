@@ -24,4 +24,61 @@ public class Project {
 		this.confirmed = false;
 
 	}
+
+	public int getProjectId() {
+		return projectId;
+	}
+
+	public void setProjectId(int projectId) {
+		this.projectId = projectId;
+	}
+
+	public long getManagerId() {
+		return managerId;
+	}
+
+	public void setManagerId(long managerId) {
+		this.managerId = managerId;
+	}
+
+	public List<Member> getMembers() {
+		return members;
+	}
+
+	public void setMembers(List<Member> members) {
+		this.members = members;
+	}
+
+	public String getProjectName() {
+		return projectName;
+	}
+
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
+
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	public String getTimeRange() {
+		return timeRange;
+	}
+
+	public void setTimeRange(String timeRange) {
+		this.timeRange = timeRange;
+	}
+
+	public boolean isConfirmed() {
+		return confirmed;
+	}
+
+	public void setConfirmed(boolean confirmed) {
+		this.confirmed = confirmed;
+	}
+
 }

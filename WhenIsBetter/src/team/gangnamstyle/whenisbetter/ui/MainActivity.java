@@ -14,8 +14,10 @@ public class MainActivity extends Activity {
 	Activity activity;
 
 	protected WhenIsBetter login;
-	Member user;
-	long phoneId;
+	private Member user;
+	private long phoneId;
+
+	// private DBHandler dbHandler;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,9 @@ public class MainActivity extends Activity {
 
 		Toast.makeText(this, "Logged in as phone # " + phoneId,
 				Toast.LENGTH_LONG).show();
+
+		/* begin DB test */
+		// dbHandler = new DBHandler();
 
 	}
 }
