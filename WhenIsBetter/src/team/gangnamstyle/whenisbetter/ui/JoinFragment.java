@@ -75,8 +75,10 @@ public class JoinFragment extends Fragment {
 									clickedProject.getManagerId());
 							bundle.putString("startDate", clickedProject
 									.getStartDate().toString());
-							bundle.putString("timeRange",
-									clickedProject.getTimeRange());
+							bundle.putInt("startTime",
+									clickedProject.getStartTime());
+							bundle.putInt("endTime",
+									clickedProject.getEndTime());
 							bundle.putBoolean("confirmed",
 									clickedProject.isConfirmed());
 							Intent in = new Intent(activity,

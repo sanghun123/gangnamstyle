@@ -10,7 +10,8 @@ public class Project {
 	private List<Member> members;
 	private String projectName;
 	private Date startDate;
-	private String timeRange;
+	private int startTime;
+	private int endTime;
 	private boolean confirmed;
 
 	public Project() {
@@ -20,7 +21,8 @@ public class Project {
 		this.members = null;
 		this.projectName = "";
 		this.startDate = new Date();
-		this.timeRange = "";
+		this.startTime = 0;
+		this.endTime = 0;
 		this.confirmed = false;
 
 	}
@@ -65,12 +67,20 @@ public class Project {
 		this.startDate = startDate;
 	}
 
-	public String getTimeRange() {
-		return timeRange;
+	public int getStartTime() {
+		return startTime;
 	}
 
-	public void setTimeRange(String timeRange) {
-		this.timeRange = timeRange;
+	public void setStartTime(int startTime) {
+		this.startTime = startTime;
+	}
+
+	public int getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(int endTime) {
+		this.endTime = endTime;
 	}
 
 	public boolean isConfirmed() {

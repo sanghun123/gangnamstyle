@@ -1,6 +1,7 @@
 package team.gangnamstyle.whenisbetter.ui;
 
 import team.gangnamstyle.whenisbetter.R;
+import team.gangnamstyle.whenisbetter.model.Schedule;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -39,7 +40,6 @@ public class SubmitScheduleActivity extends Activity {
 		}
 		Bundle extras = getIntent().getExtras();
 		
-		
 		tvProjectName.setText(extras.getString("projectName"));
 		tvProjectManager.setText("Invited by " + extras.getLong("managerId"));
 		btnSubmit.setOnClickListener(new OnClickListener() {
@@ -49,6 +49,7 @@ public class SubmitScheduleActivity extends Activity {
 						Toast.LENGTH_SHORT).show();
 			}
 		});
+<<<<<<< HEAD
 		btnUpdate.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v){
@@ -57,5 +58,14 @@ public class SubmitScheduleActivity extends Activity {
 			}
 			
 		});
+=======
+
+		/* test schedule and timeslot data structure */
+
+		Schedule s = new Schedule(8, 20);
+		String test = s.toString();
+		System.out.println(test);
+
+>>>>>>> More Join/View Fragment and Schedule model
 	}
 }
