@@ -17,7 +17,8 @@ public class SubmitScheduleActivity extends Activity {
 	Button btnSubmit;
 	Button btnUpdate;
 	Button[] buttons;
-	int numberOfButtons=15;
+	int numberOfButtons = 15;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,21 +26,20 @@ public class SubmitScheduleActivity extends Activity {
 		tvProjectName = (TextView) findViewById(R.id.project_name);
 		tvProjectManager = (TextView) findViewById(R.id.project_manager);
 		btnSubmit = (Button) findViewById(R.id.submit);
-		btnUpdate= (Button) findViewById(R.id.submit);
-		LinearLayout layout = (LinearLayout) findViewById(R.id.linear_layout); 
-		buttons= new Button[numberOfButtons];
-		
-		for (int i=0; i<numberOfButtons; i++){
-			buttons[i]= new Button(this);
+		btnUpdate = (Button) findViewById(R.id.submit);
+		LinearLayout layout = (LinearLayout) findViewById(R.id.linear_layout);
+		buttons = new Button[numberOfButtons];
+
+		for (int i = 0; i < numberOfButtons; i++) {
+			buttons[i] = new Button(this);
 			LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.FILL_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-            );
-            
-			layout.addView(buttons[i], p); 
+					LinearLayout.LayoutParams.FILL_PARENT,
+					LinearLayout.LayoutParams.WRAP_CONTENT);
+
+			layout.addView(buttons[i], p);
 		}
 		Bundle extras = getIntent().getExtras();
-		
+
 		tvProjectName.setText(extras.getString("projectName"));
 		tvProjectManager.setText("Invited by " + extras.getLong("managerId"));
 		btnSubmit.setOnClickListener(new OnClickListener() {
@@ -49,16 +49,13 @@ public class SubmitScheduleActivity extends Activity {
 						Toast.LENGTH_SHORT).show();
 			}
 		});
-<<<<<<< HEAD
-		btnUpdate.setOnClickListener(new OnClickListener(){
+		btnUpdate.setOnClickListener(new OnClickListener() {
 			@Override
-			public void onClick(View v){
-				
-				
+			public void onClick(View v) {
+
 			}
-			
+
 		});
-=======
 
 		/* test schedule and timeslot data structure */
 
@@ -66,6 +63,5 @@ public class SubmitScheduleActivity extends Activity {
 		String test = s.toString();
 		System.out.println(test);
 
->>>>>>> More Join/View Fragment and Schedule model
 	}
 }
