@@ -39,6 +39,7 @@ public class SubmitScheduleActivity extends Activity {
 		}
 		Bundle extras = getIntent().getExtras();
 		
+		
 		tvProjectName.setText(extras.getString("projectName"));
 		tvProjectManager.setText("Invited by " + extras.getLong("managerId"));
 		btnSubmit.setOnClickListener(new OnClickListener() {
