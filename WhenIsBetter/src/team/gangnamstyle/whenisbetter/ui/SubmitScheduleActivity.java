@@ -22,7 +22,7 @@ public class SubmitScheduleActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.submit_schedule);
+		setContentView(R.layout.activity_submit_schedule);
 		tvProjectName = (TextView) findViewById(R.id.project_name);
 		tvProjectManager = (TextView) findViewById(R.id.project_manager);
 		btnSubmit = (Button) findViewById(R.id.submit);
@@ -58,7 +58,6 @@ public class SubmitScheduleActivity extends Activity {
 		});
 
 		/* test schedule and timeslot data structure */
-
 		Schedule s = new Schedule(8, 20);
 		String test = s.toString();
 		System.out.println(test);

@@ -16,7 +16,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="team.gangnamstyle.whenisbetter.ui.MainActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,9 +24,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="team.gangnamstyle.whenisbetter.ui.SubmitScheduleActivity" />
+        <activity android:name=".ui.SubmitScheduleActivity" >
+        </activity>
+        <activity android:name=".ui.ViewScheduleActivity" >
+        </activity>
+        
         <activity
-            android:name="team.gangnamstyle.whenisbetter.UpdateSchedule"
+            android:name=".ui.UpdateSchedule"
             android:label="@string/title_activity_update_schedule" >
         </activity>
     </application>

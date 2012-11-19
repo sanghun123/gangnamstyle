@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/project_name"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center_horizontal"
+    	android:layout_margin="5dp"
+    	android:text="Project Name"
+    	android:textSize="12dp"
+    	/>
+    
+    <TextView
+        android:id="@+id/project_manager"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center_horizontal"
+    	android:text="invited by ?"
+    	android:textSize="10dp"
+    	/>
+    
+     <TextView
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center_horizontal"
+    	android:text="View the optimal meeting time according to other members"
+    	android:textSize="12dp"
+    	android:layout_marginTop="10dp"
+    	/>
+    
+</LinearLayout>

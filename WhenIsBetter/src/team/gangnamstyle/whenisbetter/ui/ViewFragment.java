@@ -67,7 +67,7 @@ public class ViewFragment extends Fragment {
 				bundle.putInt("startTime", clickedProject.getStartTime());
 				bundle.putInt("endTime", clickedProject.getEndTime());
 				bundle.putBoolean("confirmed", clickedProject.isConfirmed());
-				Intent in = new Intent(activity, SubmitScheduleActivity.class);
+				Intent in = new Intent(activity, ViewScheduleActivity.class);
 
 				Toast.makeText(ViewFragment.this.getActivity(),
 						"Selected " + clickedProject.getProjectName(),
